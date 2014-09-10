@@ -1,0 +1,10 @@
+doctype html
+html
+  head
+    link(rel="stylesheet", type="text/css", href="css/app.min.css")
+    script(type="text/javascript", src="js/vendor.min.js")
+  body(ng-app="pmLucky")
+    header(ui-view="header")
+    section(ui-view="content")
+    footer
+    script(type="text/javascript", src="js/app.min.js")
