@@ -40,7 +40,7 @@ For each field, the client need to provide us these informations
 + thank you text : `textarea`. The text to be displayed after the user shared his information to us.
 
 ## sharing settings
-###shared *object*
+###message
 + title : `input text`
 + description : `textarea`
 + image : `input file`
