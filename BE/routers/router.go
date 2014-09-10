@@ -2,7 +2,7 @@ package routers
 
 import (
 	"github.com/astaxie/beego"
-	"github.com/magicshui/pm-lucky/controllers"
+	"github.com/magicshui/pm-lucky/BE/controllers"
 )
 
 func init() {
