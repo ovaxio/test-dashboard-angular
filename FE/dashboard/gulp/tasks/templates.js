@@ -10,7 +10,10 @@ gulp.task('templates', function () {
     .pipe(jade({pretty: false}))
     .pipe(size())
     .pipe(rename(function (path) {
-      path.dirname = path.dirname.split('/').shift();
+      console.log(path.dirname);
+      path.dirname = path.dirname.split('/');
+      path.dirname.pop();
+      path.dirname = path.dirname.join('/');
     }))
     .pipe(gulp.dest('dist/templates'));
 });
