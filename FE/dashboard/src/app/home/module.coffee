@@ -9,7 +9,7 @@ angular.module 'pmLucky.home', ['ui.router']
       views: 
         'header': {}
         'content': 
-          templateUrl: 'templates/'+moduleName+'/index.html'
+          templateUrl: 'templates/'+moduleName+'/content-index.html'
           controller: 'homeCtrl'
     return
   ]  
