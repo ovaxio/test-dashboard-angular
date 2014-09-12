@@ -1,6 +1,6 @@
 'use strict'
 
-app = angular.module 'pmLucky', [
+angular.module 'pmLucky', [
   'pmLucky.home', 
   'pmLucky.luckyDraw', 
   'pmLucky.settings',
