@@ -6,11 +6,18 @@ var gulp = require('gulp'),
   sourcemaps = require('gulp-sourcemaps');
 
 gulp.task('bower', function () {
-  return gulp.src(gulpBowerFiles(), {base: 'bower_components'})
+  gulp.src(gulpBowerFiles({filter: /(\.js$)/i}), {base: 'bower_components'})
     .pipe(sourcemaps.init())
     .pipe(concat('vendor.min.js'))
     .pipe(uglify())
     .pipe(size())
     .pipe(sourcemaps.write('./maps'))
     .pipe(gulp.dest("dist/js"));
+
+  gulp.src(gulpBowerFiles({filter: /(\.css$)/i}), {base: 'bower_components'})
+    .pipe(sourcemaps.init())
+    .pipe(concat('vendor.min.css'))
+    .pipe(size())
+    .pipe(sourcemaps.write('./maps'))
+    .pipe(gulp.dest("dist/css"));
 });

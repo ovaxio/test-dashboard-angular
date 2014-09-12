@@ -19,7 +19,8 @@
   ],
   "dependencies": {
     "angular": "1.2.24",
-    "angular-ui-router": "~0.2.11"
+    "angular-ui-router": "~0.2.11",
+    "kiwi": "tuxlinuxien/kiwi#0.0.2"
   },
   "overrides": {
     "angular": {
@@ -30,6 +31,11 @@
     "angular-ui-router": {
       "main": [
         "release/angular-ui-router.min.js"
+      ]
+    },
+    "kiwi" : {
+      "main" : [
+        "kiwi.min.css"
       ]
     }
   }
