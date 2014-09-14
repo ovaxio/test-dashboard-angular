@@ -10,7 +10,6 @@ gulp.task('templates', function () {
     .pipe(jade({pretty: false}))
     .pipe(size())
     .pipe(rename(function (path) {
-      console.log(path.dirname);
       path.dirname = path.dirname.split('/');
       path.dirname.pop();
       path.dirname = path.dirname.join('/');
