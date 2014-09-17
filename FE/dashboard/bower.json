@@ -20,23 +20,33 @@
   "dependencies": {
     "angular": "1.2.24",
     "angular-ui-router": "~0.2.11",
-    "kiwi": "tuxlinuxien/kiwi#0.0.2"
+    "kiwi": "tuxlinuxien/kiwi#0.0.2",
+    "angular-file-upload": "~1.1.1"
   },
   "overrides": {
     "angular": {
-      "main": [
-        "angular.min.js"
-      ]
+      "main": {
+        "development":"angular.js",
+        "production":"angular.min.js"
+      }
     },
     "angular-ui-router": {
-      "main": [
-        "release/angular-ui-router.min.js"
-      ]
+      "main": {
+        "development":"release/angular-ui-router.js",
+        "production":"release/angular-ui-router.min.js"
+      }
     },
-    "kiwi" : {
-      "main" : [
-        "kiwi.min.css"
-      ]
+    "angular-file-upload": {
+      "main": {
+        "development":"angular-file-upload.js",
+        "production":"angular-file-upload.min.js"
+      }
+    },
+    "kiwi": {
+      "main": {
+        "development":"kiwi.css",
+        "production":"kiwi.min.css"
+      }
     }
   }
 }
