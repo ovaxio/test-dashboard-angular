@@ -21,32 +21,47 @@
     "angular": "1.2.24",
     "angular-ui-router": "~0.2.11",
     "kiwi": "tuxlinuxien/kiwi#0.0.2",
-    "angular-file-upload": "~1.1.1"
+    "angular-file-upload": "~1.1.1",
+    "notebook-template": "./local_components/notebook-web-app-and-admin-template.zip"
   },
   "overrides": {
     "angular": {
       "main": {
-        "development":"angular.js",
-        "production":"angular.min.js"
+        "development": "angular.js",
+        "production": "angular.min.js"
       }
     },
     "angular-ui-router": {
       "main": {
-        "development":"release/angular-ui-router.js",
-        "production":"release/angular-ui-router.min.js"
+        "development": "release/angular-ui-router.js",
+        "production": "release/angular-ui-router.min.js"
       }
     },
     "angular-file-upload": {
       "main": {
-        "development":"angular-file-upload.js",
-        "production":"angular-file-upload.min.js"
+        "development": "angular-file-upload.js",
+        "production": "angular-file-upload.min.js"
       }
     },
     "kiwi": {
       "main": {
-        "development":"kiwi.css",
-        "production":"kiwi.min.css"
+        "development": "kiwi.css",
+        "production": "kiwi.min.css"
       }
+    },
+    "notebook-template": {
+      "main": [
+        "css/bootstrap.css",
+        "css/animate.css",
+        "css/font-awesome.min.css",
+        "css/font.css",
+        "css/app.css",
+        "js/jquery.min.js",
+        "js/bootstrap.js",
+        "js/app.js",
+        "js/sslimscroll/jquery.slimscroll.min.js",
+        "js/app.plugin.js"
+      ]
     }
   }
 }
