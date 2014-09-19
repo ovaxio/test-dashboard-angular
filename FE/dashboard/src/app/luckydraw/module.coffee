@@ -5,7 +5,6 @@ angular.module 'pmLucky.luckyDraw', ['pmLucky.luckyDraw.price','ui.router']
 
   $stateProvider
   .state moduleName, 
-    # abstract: true
     url: '/'+ moduleName
     views: 
       'header': {}

@@ -1,1 +1,33 @@
-div settings template
+#globalSettings-page.page
+  h2 Background Images
+  .kiwi-grid
+    .kiwi-col.l-1-2.s-1
+      .label Landing Page
+      .dropPlace
+    .kiwi-col.l-1-2.s-1
+      .label Home Page
+      .dropPlace
+
+  h2 Other Settings
+  .form
+    .field
+      .kiwi-grid
+        .kiwi-col.l-1-6.s-1
+          label.label(for="page-title") Title
+        .kiwi-col.l-1-2.s-1
+          input.input#page-title(type="text", placeholder="Title")
+    .field
+      .kiwi-grid
+        .kiwi-col.l-1-6.s-1
+          label.label(for="page-policies") Policies
+        .kiwi-col.l-1-2.s-1
+          textarea.textarea#page-policies(placeholder="Enter the full Policies")
+    .field
+      .kiwi-grid
+        .kiwi-col.l-1-6.s-1
+          label.label(for="page-policies-sum") Policies' summary
+        .kiwi-col.l-1-2.s-1
+          textarea.textarea#page-policies-sum(placeholder="Enter a summary of the Policies")
+
+    .field
+      button.button Save

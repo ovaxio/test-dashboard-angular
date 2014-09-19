@@ -20,7 +20,6 @@
   "dependencies": {
     "angular": "1.2.24",
     "angular-ui-router": "~0.2.11",
-    "kiwi": "tuxlinuxien/kiwi#0.0.2",
     "angular-file-upload": "~1.1.1",
     "notebook-template": "./local_components/notebook-web-app-and-admin-template.zip"
   },
@@ -43,12 +42,6 @@
         "production": "angular-file-upload.min.js"
       }
     },
-    "kiwi": {
-      "main": {
-        "development": "kiwi.css",
-        "production": "kiwi.min.css"
-      }
-    },
     "notebook-template": {
       "main": [
         "css/bootstrap.css",
@@ -60,7 +53,8 @@
         "js/bootstrap.js",
         "js/app.js",
         "js/sslimscroll/jquery.slimscroll.min.js",
-        "js/app.plugin.js"
+        "js/app.plugin.js",
+        "fonts/*"
       ]
     }
   }

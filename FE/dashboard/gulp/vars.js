@@ -24,8 +24,8 @@ module.exports = {
     assets : prod_path+'assets'
   },
   watch : {
-    stylus : src_path+'/stylus/**/*.stylus',
-    coffee : src_path+'/app/**/*.coffee',
+    stylus : [src_path+'/stylus/*.styl', src_path+'stylus/**/*.stylus'],
+    coffee : src_path+'app/**/*.coffee',
     templates : src_path+'app/**/*.jade'
   }
 }

@@ -5,7 +5,9 @@ var gulp = require('gulp'),
   concat = require('gulp-concat'),
   size = require('gulp-size'),
   sourcemaps = require('gulp-sourcemaps'),
-  gulpif = require('gulp-if');
+  gulpif = require('gulp-if'),
+  rename = require('gulp-rename'),
+  minify = require('gulp-minify-css');
 
 gulp.task('dev-bower', bowerBuild('build'));
 gulp.task('deploy-bower', bowerBuild('prod'));
@@ -37,16 +39,23 @@ function bowerBuild(env) {
       gulp.src(cssFiles, {base: base_dir})
         .pipe(gulpif(isDev, sourcemaps.init()))
         .pipe(concat('vendor.min.css'))
+        .pipe(gulpif(!isDev, minify({keepSpecialComments: 0})))
         .pipe(size({showFiles: true}))
         .pipe(gulpif(isDev, sourcemaps.write('./maps')))
         .pipe(gulp.dest(GLOBVARS[env].css));
     }
 
-    // CSS files
+    // other files
     if (otherFiles.length > 0) {
       gulp.src(otherFiles, {base: base_dir})
         .pipe(size({showFiles: true}))
-        .pipe(gulp.dest(GLOBVARS[env].assets));
+        .pipe(rename(function (path) {
+          var tmp = path.dirname.split('/');
+          tmp.shift();
+          tmp = tmp.join('/');
+          path.dirname = tmp;
+        }))
+        .pipe(gulp.dest(GLOBVARS[env].basedir));
     }
   }
 }
