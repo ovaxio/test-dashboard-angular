@@ -3,8 +3,7 @@ var gulp = require('gulp'),
   plumber = require('gulp-plumber'),
   jade = require('gulp-jade'),
   rename = require('gulp-rename'),
-  size = require('gulp-size'),
-  jadeInheritance = require('gulp-jade-inheritance');
+  size = require('gulp-size');
 
 gulp.task('dev-templates', jadeCompil('build'));
 gulp.task('deploy-templates', jadeCompil('prod'));
