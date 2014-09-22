@@ -1,33 +1,37 @@
-#globalSettings-page.page
-  h2 Background Images
-  .kiwi-grid
-    .kiwi-col.l-1-2.s-1
-      .label Landing Page
-      .dropPlace
-    .kiwi-col.l-1-2.s-1
-      .label Home Page
-      .dropPlace
+extends ../../../jade-inc/content-layout
+include ../../../jade-inc/form-mixins
 
-  h2 Other Settings
-  .form
-    .field
-      .kiwi-grid
-        .kiwi-col.l-1-6.s-1
-          label.label(for="page-title") Title
-        .kiwi-col.l-1-2.s-1
-          input.input#page-title(type="text", placeholder="Title")
-    .field
-      .kiwi-grid
-        .kiwi-col.l-1-6.s-1
-          label.label(for="page-policies") Policies
-        .kiwi-col.l-1-2.s-1
-          textarea.textarea#page-policies(placeholder="Enter the full Policies")
-    .field
-      .kiwi-grid
-        .kiwi-col.l-1-6.s-1
-          label.label(for="page-policies-sum") Policies' summary
-        .kiwi-col.l-1-2.s-1
-          textarea.textarea#page-policies-sum(placeholder="Enter a summary of the Policies")
+block content-header
+  p Global Settings
 
-    .field
-      button.button Save
+block content-body
+  section#globalSettings-page.panel.panel-default
+    .panel-body
+      form.form-horizontal
+        h3 Background Images
+        .col-lg-6
+          .form-group
+            label.control-label.col-lg-3(for="landing-page-img") Landing Page Background
+            .col-lg-9
+              +dropfile-zone
+        .col-lg-6
+          .form-group
+            label.control-label.col-lg-3(for="home-page-img") Home Page Background
+            .col-lg-9
+              +dropfile-zone
+                br
+                | or 
+                a(href="#") Use the Landing Page Background
+
+        .line.line-dashed.line-lg.pull-in
+        
+        h3 Other Settings
+        .col-lg-6
+          +input-text({id:'page-title', label: 'Title', placeholder: 'Title'})
+          +textarea({id:'page-policies', label: 'Policies', placeholder: 'Enter the full Policies'})
+          +textarea({id:'page-policies-sum', label: 'Policies\' summary', placeholder: 'Enter a summary of the Policies'})
+
+        .line.line-dashed.line-lg.pull-in
+        .col-lg-6
+          +form-actions([{btnClass:'default', label: 'test'},{btnClass:'primary', label: 'Save changes'}])
+          

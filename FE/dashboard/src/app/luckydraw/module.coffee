@@ -7,7 +7,7 @@ angular.module 'pmLucky.luckyDraw', ['pmLucky.luckyDraw.price','ui.router']
   .state moduleName, 
     url: '/'+ moduleName
     views: 
-      'header': {}
+      'menuView': {}
       'content': { templateUrl: 'templates/'+moduleName+'/index.html'}
 
   return

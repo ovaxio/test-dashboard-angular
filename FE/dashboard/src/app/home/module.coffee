@@ -7,7 +7,7 @@ angular.module 'pmLucky.home', ['ui.router']
     .state moduleName, 
       url: '/'
       views: 
-        'header': {}
+        'menuView': {}
         'content': 
           templateUrl: 'templates/'+moduleName+'/content-index.html'
           controller: 'homeCtrl'

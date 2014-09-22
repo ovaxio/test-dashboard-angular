@@ -1,6 +1,11 @@
-h2 Settings for the Luck Draw
-div(ui-view='content')
+extends ../../../jade-inc/content-layout
 
-div
-  a(ui-sref='luckydraw.price.new') new price
-  a(ui-sref='luckydraw.price.list') list prices
+block content-header
+  p Lucky Draw Settings
+
+block content-body
+  div(ui-view='content')
+
+  div
+    a(ui-sref='luckydraw.price.new') new price
+    a(ui-sref='luckydraw.price.list') list prices

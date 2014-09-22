@@ -1,0 +1,26 @@
+mixin dropfile-zone()
+  .dropfile.visible-lg
+    small Drag and Drop your file here
+      br
+      | or 
+      a(href="#") Import your file here
+      |.
+      block
+
+mixin input-text(input)
+  .form-group
+    label.control-label.col-lg-3(for!=input.id)=input.label
+    .col-lg-9
+      input.form-control(id!=input.id, type="text", placeholder!=input.placeholder)
+
+mixin textarea(input)
+  .form-group
+    label.control-label.col-lg-3(for!=input.id)=input.label
+    .col-lg-9
+      textarea.form-control(id!=input.id, type="text", placeholder!=input.placeholder)
+
+mixin form-actions(actions)
+  .form-group
+    .col-lg-offset-3.col-lg-9
+      each action in actions
+        button.btn(type=action.type ? action.type : "submit", class="btn-"+action.btnClass)=action.label

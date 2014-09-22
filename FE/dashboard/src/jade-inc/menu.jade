@@ -1,0 +1,23 @@
+mixin nav-link(link)
+  li.b-b.b-light
+    if link.sref
+      a(ui-sref!=link.sref)
+        i.fa.fa-chevron-right.pull-right.m-t-xs.text-xs.icon-muted
+        | #{link.text}
+    else
+      a(href!=link.href)
+        i.fa.fa-chevron-right.pull-right.m-t-xs.text-xs.icon-muted
+        | #{link.text}
+
+aside.aside-md.bg-white.b-r
+  section.vbox
+    header.wrapper.b-b.header
+      a(ui-sref='home') Lucky Draw
+    section.scrollable
+      .slim-scroll(data-height="auto" data-disable-fade-out="true" data-distance="0" data-size="5px" data-color="#333333")
+        ul.nav
+          +nav-link({'sref': 'settings', 'text': 'Global Settings'})
+          +nav-link({'sref': 'luckydraw', 'text': 'Lucky Draw Settings'})
+          +nav-link({'sref': 'form', 'text': 'Form Settings'})
+          +nav-link({'sref': 'sharing', 'text': 'Sharing Settings'})
+          +nav-link({'sref': 'statistics', 'text': 'Statistics'})
