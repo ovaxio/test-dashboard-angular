@@ -1,12 +1,15 @@
 doctype html
-html
+html.app
   head
-    link(rel="stylesheet", type="text/css", href="css/vendor.min.css")
-    link(rel="stylesheet", type="text/css", href="css/app.min.css")
+    block stylesheet
+      link(rel="stylesheet", type="text/css", href="css/vendor.min.css")
+      link(rel="stylesheet", type="text/css", href="css/app.min.css")
     script(type="text/javascript", src="js/vendor.min.js")
-  body(ng-app="pmLucky")
-    .main-container
-      header(ui-view="header")
-      section#page.container(ui-view="content")
-      footer
-    script(type="text/javascript", src="js/app.min.js")
+  body
+    section.vbox(ng-app="pmLucky")
+      section.hbox.stretch
+        include jade-inc/menu          
+        section.vbox(ui-view="content")
+
+    block scripts
+      script(type="text/javascript", src="js/app.min.js")

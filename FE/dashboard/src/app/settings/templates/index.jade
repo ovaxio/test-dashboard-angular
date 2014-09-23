@@ -1,1 +1,37 @@
-div settings template
+extends ../../../jade-inc/content-layout
+include ../../../jade-inc/form-mixins
+
+block content-header
+  p Global Settings
+
+block content-body
+  section#globalSettings-page.panel.panel-default
+    .panel-body
+      form.form-horizontal
+        h3 Background Images
+        .col-lg-6
+          .form-group
+            label.control-label.col-lg-3(for="landing-page-img") Landing Page Background
+            .col-lg-9
+              +dropfile-zone
+        .col-lg-6
+          .form-group
+            label.control-label.col-lg-3(for="home-page-img") Home Page Background
+            .col-lg-9
+              +dropfile-zone
+                br
+                | or 
+                a(href="#") Use the Landing Page Background
+
+        .line.line-dashed.line-lg.pull-in
+        
+        h3 Other Settings
+        .col-lg-6
+          +input-text({id:'page-title', label: 'Title', placeholder: 'Title'})
+          +textarea({id:'page-policies', label: 'Policies', placeholder: 'Enter the full Policies'})
+          +textarea({id:'page-policies-sum', label: 'Policies\' summary', placeholder: 'Enter a summary of the Policies'})
+
+        .line.line-dashed.line-lg.pull-in
+        .col-lg-6
+          +form-actions([{btnClass:'default', label: 'test'},{btnClass:'primary', label: 'Save changes'}])
+          
