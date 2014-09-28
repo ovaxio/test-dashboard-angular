@@ -12,10 +12,9 @@ gulp.task("watch", function () {
   watch([GLOBVARS.src.basedir+'index.jade', GLOBVARS.src.basedir+'jade-inc/**/*.jade'], function () {
     gulp.start('dev-indexHTML');
   });
-  gulp.src(GLOBVARS.watch.coffee)
-  .pipe(watch(GLOBVARS.watch.coffee, function () {
+  watch(GLOBVARS.watch.coffee, function () {
     gulp.start('dev-coffee');
-  }));
+  });
   watch('bower.json', function () {
     gulp.start('dev-bower');
   });
