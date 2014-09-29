@@ -18,10 +18,10 @@
     "tests"
   ],
   "dependencies": {
+    "notebook-template": "./local_components/notebook-web-app-and-admin-template.zip",
     "angular": "1.2.24",
     "angular-ui-router": "~0.2.11",
-    "angular-file-upload": "~1.1.1",
-    "notebook-template": "./local_components/notebook-web-app-and-admin-template.zip"
+    "angular-file-upload": "~1.1.1"
   },
   "overrides": {
     "angular": {
@@ -48,13 +48,18 @@
         "css/animate.css",
         "css/font-awesome.min.css",
         "css/font.css",
+        "js/slider/slider.css",
+        "js/fuelux/fuelux.css",
         "css/app.css",
         "js/jquery.min.js",
         "js/bootstrap.js",
-        "js/app.js",
+        "js/slider/bootstrap-slider.js",
+        "js/fuelux/fuelux.js",
         "js/slimscroll/jquery.slimscroll.min.js",
+        "js/sortable/jquery.sortable.js",
         "js/app.plugin.js",
-        "fonts/*"
+        "fonts/*",
+        "js/app.js"
       ]
     }
   }
