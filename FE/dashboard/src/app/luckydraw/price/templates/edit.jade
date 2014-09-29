@@ -1,0 +1,16 @@
+extends ../../../../jade-inc/content-layout
+include ../../../../jade-inc/form-mixins
+
+block content-header
+  p Lucky Draw Settings
+
+block content-body
+  section#luckydraw-page.panel.panel-default
+    .panel-body
+
+      form.form-horizontal
+        h3.col-lg-12 {{title}}
+          span(ng-show='edit') :&nbsp;
+            strong {{price.title}}
+        .col-lg-6
+          +input-text({id:'page-title', label: 'Title', placeholder: 'Title'})

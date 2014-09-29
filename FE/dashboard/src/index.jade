@@ -7,9 +7,11 @@ html.app
     script(type="text/javascript", src="js/vendor.min.js")
   body
     section.vbox(ng-app="pmLucky")
-      section.hbox.stretch
-        include jade-inc/menu          
-        section.vbox(ui-view="content")
+      section
+        section.hbox.stretch
+          include jade-inc/menu    
+          section#content   
+            section.hbox.stretch(ui-view="content")
 
     block scripts
       script(type="text/javascript", src="js/app.min.js")

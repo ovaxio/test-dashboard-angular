@@ -1,17 +1,33 @@
-mixin dropfile-zone()
-  .dropfile.visible-lg
-    small Drag and Drop your file here
-      br
-      | or 
-      a(href="#") Import your file here
-      |.
-      block
+mixin dropfile-zone(label)
+  .form-group
+    label.control-label.col-lg-3=label
+    .col-lg-9
+      .dropfile.visible-lg(pm-dropfile)
+        small Drag and Drop your file here
+          //- br
+          //- | or 
+          //- a(href="#") Import your file here
+          //- |.
+          //- block
 
 mixin input-text(input)
   .form-group
     label.control-label.col-lg-3(for!=input.id)=input.label
     .col-lg-9
       input.form-control(id!=input.id, type="text", placeholder!=input.placeholder)
+
+mixin input-slider(input)
+  .form-group
+    label.control-label.col-lg-3(for!=input.id)=input.label
+    .col-lg-9
+      div(pm-slider=JSON.stringify(input))
+
+mixin input-spinner(input)
+  .form-group
+    label.control-label.col-lg-3(for!=input.id)=input.label
+    .col-lg-9
+      div(pm-spinner=JSON.stringify(input))
+
 
 mixin textarea(input)
   .form-group
