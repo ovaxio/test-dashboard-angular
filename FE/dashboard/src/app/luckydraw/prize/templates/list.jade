@@ -1,0 +1,16 @@
+ul.list-group.gutter.list-group-lg.list-group-sp(pm-sortable, ng-controller='listCtrl as list')
+  li.list-group-item(ng-repeat='item in list.items', pm-prize-item)
+    span.pull-right
+      a(ui-sref="luckydraw.prize.edit({prizeId:item.id})")
+        i.fa.fa-pencil.icon-muted.fa-fw.m-r-xs
+      a(ng-click="list.copy(item)")
+        i.fa.fa-plus.icon-muted.fa-fw.m-r-xs
+      a(ng-click="list.delete(item)")
+        i.fa.fa-times.icon-muted.fa-fw
+    span.pull-left.media-xs
+      i.fa.fa-sort.text-muted.fa.m-r-sm
+    .clear {{item.name}}
+
+button.btn.btn-link(ui-sref="luckydraw.prize.new") 
+  i.fa.fa-plus.fa-fw.m-r-xs
+  | Add a new prize

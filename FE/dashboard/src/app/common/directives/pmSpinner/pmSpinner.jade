@@ -1,5 +1,5 @@
-.spinner.input-group(data-min="{{pmSpinner.min}}", data-max="{{pmSpinner.max}}")
-  input.form-control.spinner-input(type="text", value="{{pmSpinner.value}}")
+.spinner.input-group(data-min="{{pmSpinner.min}}", data-max="{{pmSpinner.max}}", data-value="{{value}}")
+  input.form-control.spinner-input(type="text", id="{{pmSpinner.id}}", value="{{value}}")
   .btn-group.btn-group-vertical.input-group-btn
     button.btn.btn-default.spinner-up(type="button")
       i.fa.fa-chevron-up.text-muted

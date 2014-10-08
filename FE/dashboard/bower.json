@@ -21,7 +21,8 @@
     "notebook-template": "./local_components/notebook-web-app-and-admin-template.zip",
     "angular": "1.2.24",
     "angular-ui-router": "~0.2.11",
-    "angular-file-upload": "~1.1.1"
+    "angular-file-upload": "~1.1.1",
+    "html.sortable": "~0.1.5"
   },
   "overrides": {
     "angular": {
@@ -42,6 +43,12 @@
         "production": "angular-file-upload.min.js"
       }
     },
+     "html.sortable": {
+      "main": [
+        "dist/html.sortable.js",
+        "dist/html.sortable.angular.js"
+      ]
+    },
     "notebook-template": {
       "main": [
         "css/bootstrap.css",
@@ -56,7 +63,6 @@
         "js/slider/bootstrap-slider.js",
         "js/fuelux/fuelux.js",
         "js/slimscroll/jquery.slimscroll.min.js",
-        "js/sortable/jquery.sortable.js",
         "js/app.plugin.js",
         "fonts/*",
         "js/app.js"

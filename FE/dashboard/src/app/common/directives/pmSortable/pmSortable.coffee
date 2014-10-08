@@ -7,6 +7,11 @@ angular.module 'pmLucky'
     }
     link: (scope, element, attrs)->
       scope.$watch 'pmSortable', ()->
-        angular.element element 
-        .sortable()
+        $that = angular.element element 
+        .sortable
+          handle: '.fa.fa-sort'
+        
+        $that.on 'sortupdate', (e, ui)->
+          console.log scope.$parent.list.items
+
   }

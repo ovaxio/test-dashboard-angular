@@ -5,4 +5,5 @@ angular.module 'pmLucky'
     templateUrl: 'templates/common/directives/pmSpinner.html'
     scope:
       pmSpinner: '='
+      value: '=ngModel'
   }

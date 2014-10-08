@@ -14,7 +14,7 @@ mixin input-text(input)
   .form-group
     label.control-label.col-lg-3(for!=input.id)=input.label
     .col-lg-9
-      input.form-control(id!=input.id, type="text", placeholder!=input.placeholder)
+      input.form-control(id!=input.id, type="text", placeholder!=input.placeholder)&attributes(attributes)
 
 mixin input-slider(input)
   .form-group
@@ -26,14 +26,13 @@ mixin input-spinner(input)
   .form-group
     label.control-label.col-lg-3(for!=input.id)=input.label
     .col-lg-9
-      div(pm-spinner=JSON.stringify(input))
-
+      div(pm-spinner=JSON.stringify(input))&attributes(attributes)
 
 mixin textarea(input)
   .form-group
     label.control-label.col-lg-3(for!=input.id)=input.label
     .col-lg-9
-      textarea.form-control(id!=input.id, type="text", placeholder!=input.placeholder)
+      textarea.form-control(id!=input.id, placeholder!=input.placeholder)&attributes(attributes)
 
 mixin form-actions(actions)
   .form-group

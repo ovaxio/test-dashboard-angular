@@ -1,5 +1,4 @@
 angular.module 'pmLucky.home'
-.controller 'homeCtrl', ['$scope', ($scope)->
-  $scope.pageName = 'home'
+.controller 'homeCtrl', [($scope)->
   return
 ]
