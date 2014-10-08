@@ -1,6 +1,28 @@
 extends ../../../jade-inc/content-layout
+include ../../../jade-inc/form-mixins
 
 block content-header
-  p Sharing Settings
+  p Sharing Informations
 
 block content-body
+  section#sharingSettings-page.panel.panel-default
+    .panel-body
+      form.form-horizontal
+        h3.col-lg-12 Message to share
+        .col-lg-6
+          +input-text({id:'page-title', label: 'Title', placeholder: 'Title'})
+          +textarea({id:'page-description', label: 'Description', placeholder: 'Enter a description for the share message'})
+          +dropfile-zone('Image')
+
+        .col-lg-12.line.line-dashed.line-lg.pull-in
+        
+        h3.col-lg-12 Other Settings
+        .col-lg-6
+          +input-text({id:'follow-url', label: 'Follow pages\'s URL', placeholder: 'http://'})
+          +input-text({id:'client-name', label: 'Client name (to show)', placeholder: ''})
+          +input-spinner({id:'new-change-nb', label: 'How many share give a chance to play', min: 0, value: 0, max: 999})
+          
+        .col-lg-12.line.line-dashed.line-lg.pull-in
+        .col-lg-6
+          +form-actions([{btnClass:'default', label: 'test'},{btnClass:'primary', label: 'Save changes'}])
+          

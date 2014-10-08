@@ -1,6 +1,6 @@
-var src_path = './src/',
-    build_path = './dev/',
-    prod_path = './dist/';
+var src_path = 'src/',
+    build_path = 'dev/',
+    prod_path = 'dist/';
 
 module.exports = {
   src : {

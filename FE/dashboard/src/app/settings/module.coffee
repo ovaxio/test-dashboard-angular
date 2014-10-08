@@ -7,7 +7,6 @@ angular.module 'pmLucky.settings', ['ui.router']
   .state moduleName, 
     url: '/'+ moduleName
     views: 
-      'menuView': {}
       'content': {templateUrl: 'templates/'+moduleName+'/index.html'}
   return
 ]

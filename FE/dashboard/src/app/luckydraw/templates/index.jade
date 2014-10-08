@@ -1,11 +1,22 @@
 extends ../../../jade-inc/content-layout
+include ../../../jade-inc/form-mixins
 
 block content-header
   p Lucky Draw Settings
 
 block content-body
-  div(ui-view='content')
+  section#luckydraw-page.panel.panel-default
+    .panel-body
+      h3.col-lg-12 prizes
+      div.col-lg-12
+        div(ui-view='prizeView')
 
-  div
-    a(ui-sref='luckydraw.price.new') new price
-    a(ui-sref='luckydraw.price.list') list prices
+      form.form-horizontal
+        h3.col-lg-12 Other Settings
+        .col-lg-6
+          +textarea({id:'win-text', label: 'Win\'s message', placeholder: 'Text to show to the winner'})
+          +input-slider({id:'chances-to-win', label: 'Chances to win', help: 'The value is in percentage (%).', min:1, max: 100, step:1})
+          
+        .col-lg-12.line.line-dashed.line-lg.pull-in
+        .col-lg-6
+          +form-actions([{btnClass:'default', label: 'test'},{btnClass:'primary', label: 'Save changes'}])
